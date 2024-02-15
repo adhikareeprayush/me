@@ -1,0 +1,237 @@
+/* Importing Fonts */
+@import url("https://fonts.cdnfonts.com/css/hanken-grotesk");
+
+/* Css Variables */
+:root {
+  /* Colors */
+  --color--primary: #ff5001;
+  --color--secondary: #efefef;
+  --color--light: #b3aea8;
+  --color--tertiary: #646368;
+  --color--dark: #231f20;
+
+  /* Fonts */
+  /* Apercu Font Family */
+  --font--apercu: "Apercu", sans-serif;
+
+  /* Hanken Grotesk Font Family */
+  --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
+}
+
+/* Apply font styles using variables */
+/* Headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-apercu-bold);
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-apercu-regular);
+}
+
+/* Clearing the deafult styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color--secondary);
+  font-family: var(--font-hanken-grotesk);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-family: var(--font-hanken-grotesk);
+  color: var(--color--dark);
+  font-weight: 900;
+  font-size: 2rem !important;
+}
+
+.nav-item {
+  font-family: var(--font--apercu);
+  color: var(--color--secondary);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0px !important;
+}
+a {
+  text-decoration: none;
+}
+
+.social {
+  color: var(--color--dark);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: x-large;
+}
+
+.social:hover {
+  color: var(--color--primary);
+}
+
+/* Side Navbar */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background-color: var(--color--tertiary);
+  color: var(--color--secondary) !important;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.side-nav.active {
+  right: 0;
+}
+
+.side-nav-links a {
+  display: block;
+  padding: 20px;
+  color: var(--color--secondary);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* change the icon color of the navbar-toggler-icon */
+.navbar-toggler {
+  border: none;
+  cursor: pointer !important;
+}
+
+/* Scrollbar Styles */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-family: var(--font--apercu);
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--color--primary) !important;
+  color: var(--color--secondary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color--dark) !important;
+  color: var(--color--secondary) !important;
+}
+
+@media (max-width: 600px) {
+  .about-img,
+  .contact-img {
+    display: none !important;
+  }
+}
+
+.about-section {
+  height: 500px;
+}
+
+/* Styling the card */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+}
+
+.card-black {
+  background-color: black;
+  color: var(--color--secondary);
+}
+
+.card-white {
+  background-color: white;
+  color: var(--color--dark);
+}
+
+.card-primary {
+  background-color: var(--color--primary);
+  color: var(--color--secondary);
+}
+
+.project-count {
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: var(--font--apercu);
+}
+
+.experience,
+.link-to-doc {
+  font-weight: 900;
+  font-family: var(--font--apercu);
+  opacity: 0.6;
+}
+
+.link-to-doc {
+  color: var(--color--primary);
+}
+
+@media (max-width: 614px) {
+  .learnings-content {
+    justify-content: center !important;
+  }
+}
+
+/* Styling the form input fields */
+.form-control {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px 0px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px var(--color--primary);
+}
+
+label {
+  font-family: var(--font--apercu);
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--color--dark);
+  margin-bottom: 0px;
+}
+
+.contact-section {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
